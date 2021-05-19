@@ -68,4 +68,6 @@ public class InterfaceSegregationPrinciple {
         }
     }
 
+    //下列进行优化
+
 }
