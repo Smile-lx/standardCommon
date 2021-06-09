@@ -17,9 +17,18 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.realaicy.aspose</groupId>
+            <artifactId>pdf</artifactId>
+            <version>21.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/aspose-pdf-19.1.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -135,12 +144,14 @@
         </dependency>
 
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
             </plugin>
         </plugins>
     </build>
